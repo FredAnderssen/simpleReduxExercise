@@ -1,11 +1,10 @@
 import React from "react";
 import { Text, View, Assets, Constants, Button, Colors, Typography } from 'react-native-ui-lib'
 import { Provider } from 'react-redux'
-const ButtonSpace = 20;
-
 import { createStore } from 'redux'
 import { connect } from 'react-redux'
 
+const BUTTON_SPACE = 20;
 
 class Home extends React.Component {
   render() {
@@ -13,7 +12,6 @@ class Home extends React.Component {
     const buttonColor = this.props.buttonEnabled ? '#30B650' : '#FB3C62'
     const bgColor = (bool) =>
       bool ? this.props.changeButtonColorTrue() : this.props.changeButtonColorFalse()
-
 
     return (
         <View style={{
@@ -35,7 +33,7 @@ class Home extends React.Component {
           <Button
              label='Change Color'
              labelStyle={{fontWeight: '600'}}
-             style={{marginBottom: ButtonSpace*15, backgroundColor: buttonColor}}
+             style={{marginBottom: BUTTON_SPACE*15, backgroundColor: buttonColor}}
              enableShadow
              onPress={() => { bgColor(!this.props.buttonEnabled) }}
              />

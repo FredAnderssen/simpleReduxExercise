@@ -1,19 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from "react";
 import { View, Text, Button } from "react-native";
 import AppNavigator from './navigator'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import rootReducer from './rootReducer'
+import homeReducer from './homeReducer'
 
-const store = createStore(rootReducer)
+const store = createStore(homeReducer)
 
 export default class App extends React.Component {
   render() {
@@ -22,7 +14,5 @@ export default class App extends React.Component {
         <AppNavigator/>
       </Provider>
     )
-
-
   }
 }

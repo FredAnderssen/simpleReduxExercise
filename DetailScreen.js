@@ -14,7 +14,6 @@ class DetailScreen extends React.Component {
           navigation.push('Details')
          }}
         />
-
         <Button
           title="Go Home"
           onPress = {() => {
