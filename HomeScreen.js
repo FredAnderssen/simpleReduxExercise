@@ -1,7 +1,5 @@
 import React from "react";
 import { Text, View, Assets, Constants, Button, Colors, Typography } from 'react-native-ui-lib'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 import { connect } from 'react-redux'
 
 const BUTTON_SPACE = 20;
@@ -52,7 +50,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    buttonEnabled: state.buttonEnabled
+    buttonEnabled: state.homeReducer.buttonEnabled
   }
 }
 

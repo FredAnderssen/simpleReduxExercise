@@ -1,7 +1,8 @@
 const initialState = {
   buttonEnabled: true
 }
-const reducer = (state = initialState, action) => {
+
+export default function reducer(state = initialState, action) {
   switch(action.type) {
     case 'BUTTON_TRUE':
       return {
@@ -14,5 +15,3 @@ const reducer = (state = initialState, action) => {
   }
   return state
 }
-
-export default reducer
